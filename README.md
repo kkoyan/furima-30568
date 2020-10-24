@@ -27,7 +27,7 @@
 ### Association
 
 - has_many :items
-- has_many :orderss
+- has_many :orders
 
 ## items table
 
