@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e" modified="2020-10-24T07:16:22.406Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" version="13.6.5" etag="hk84OwucikvNOovRQ7Cm">
+    <diagram id="KtVb-7wrK340X0OCQ3ei" name="ページ1">
+        <mxGraphModel dx="639" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;usersテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;nickname (string型,NOT NULL)&lt;br&gt;e-mail (string型,NOT NULL)&lt;br&gt;password (string型,NOT NULL)&lt;br&gt;password_confirmation (string型,NOT NULL)&lt;br&gt;family_name (string型,NOT NULL)&lt;br&gt;first_name (string型,NOT NULL)&lt;br&gt;family_name_furikana&amp;nbsp; (string型,NOT NULL)&lt;br&gt;first_name_furikana (string型,NOT NULL)&lt;br&gt;birthday (date型,NOT NULL)" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="280" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="フリマアプリ　ER図" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="20" y="10" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;b&gt;adressesテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;postal_code (string型,NOT NULL)&lt;br&gt;prefucture_id (integer型,NOT NULL)&lt;br&gt;city (string型,NOT NULL)&lt;br&gt;house_number (string型,NOT NULL)&lt;br&gt;building_name (string型)&lt;br&gt;phone_number (string型,NOT NULL)&lt;br&gt;order (reference型)" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="400" width="280" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;b&gt;itemsテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;user (references型)&lt;br&gt;image (Active storageで実装)&lt;br&gt;product_name (string型,NOT NULL)&lt;br&gt;product_discription (text型,NOT NULL)&lt;br&gt;category_id (integer型,NOT NULL)&lt;br&gt;condition_id(integer型,NOT NULL)&lt;br&gt;shipping_charge_id (integer型,NOT NULL)&lt;br&gt;shipping_area_id (integer型,NOT NULL)&lt;br&gt;shipping_days_id (integer型,NOT NULL)&lt;br&gt;price (integer型,NOT NULL)" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="280" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;b&gt;ordersテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;item (reference型)" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="820" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="6" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="180" y="290" as="sourcePoint"/>
+                        <mxPoint x="180" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=none;html=1;exitX=0.429;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="400" as="sourcePoint"/>
+                        <mxPoint x="180" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=none;html=1;exitX=0.571;exitY=-0.004;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="180" y="400" as="sourcePoint"/>
+                        <mxPoint x="180" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="6" target="7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="319.7199999999999" y="442.31999999999994" as="sourcePoint"/>
+                        <mxPoint x="470" y="442" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=none;html=1;entryX=0.004;entryY=0.931;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="7" target="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="530" y="311.59000000000003" as="sourcePoint"/>
+                        <mxPoint x="678.3199999999999" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
