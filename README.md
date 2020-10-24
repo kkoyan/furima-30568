@@ -27,7 +27,7 @@
 ### Association
 
 - has_many :items
-- belongs_to :order
+- has_many :order
 
 ## items table
 
@@ -46,7 +46,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :order
+- has_one :order
 
 ## addresses table
 
@@ -76,4 +76,4 @@
 
 - belongs_to :item
 - belongs_to :user
-- belongs_to :address
+- has_one :address
