@@ -23,9 +23,6 @@ class Item < ApplicationRecord
     validates :shipping_days_id
   end
 
-    has_one_attached :image
-    belongs_to :user
-
     def image_presence
       errors.add(:image, 'must be attached') unless image.attached?
     end

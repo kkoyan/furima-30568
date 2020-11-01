@@ -1,5 +1,5 @@
 const taxRatio = 0.1
-const profitRatio = 0.9
+const profitRatio = 1 - taxRatio
 
 function tax (){
   const itemPrice  = document.getElementById("item-price");
