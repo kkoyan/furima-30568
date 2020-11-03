@@ -125,19 +125,17 @@
     <h2 class='title'>ピックアップカテゴリー</h2>
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
     <ul class='item-lists'>
-
+    <% @items.each do |item| %>
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <li class='list'>
-        <%= link_to "#" do %>
+        <%= link_to item_path(item.id) do %>
         <div class='item-img-content'>
           <%= image_tag "item-sample.png", class: "item-img" %>
-
-          <%# 商品が売れていればsold outを表示しましょう %>
           <div class='sold-out'>
             <span>Sold Out!!</span>
           </div>
+        <% end %>
           <%# //商品が売れていればsold outを表示しましょう %>
-
         </div>
         <div class='item-info'>
           <h3 class='item-name'>
@@ -180,10 +178,12 @@
   </div>
   <%# /商品一覧 %>
 </div>
-<%= link_to new_item_path do%>
   <div class='purchase-btn'>
-    <span class='purchase-btn-text'>出品する</span>
-    <%= image_tag 'camera.png' , size: '185x50',class: 'purchase-btn-icon' %>
-  </div>
-<% end %>
+ <% if user_signed_in? && @user != current_user %>
+    <%= link_to '出品する', new_item_path, class:'purchase-btn-text' %>
+  <% else %>
+    <%= link_to '出品する', items_path, class:'purchase-btn-text' %>
+  <% end %>
+  <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+</div>
 <%= render "shared/footer" %>
