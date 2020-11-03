@@ -11,4 +11,4 @@ function tax (){
   });
 }
 
-window.addEventListener('load', tax);
+window.addEventListener('DOMContentLoaded', tax);
