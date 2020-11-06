@@ -19,14 +19,6 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.building = nil
         expect(@order_address).to be_valid
       end
-      it 'postal_cordは半角数字, 3桁-4桁であれば購入できる' do
-        @order_address.postal_code = '123-4567'
-        expect(@order_address).to be_valid
-      end
-      it 'phone_numberは11桁以内の半角数字であれば購入できる' do
-        @order_address.phone_number = '09012345678'
-        expect(@order_address).to be_valid
-      end
     end
 
     context '商品購入がうまくいかないとき' do

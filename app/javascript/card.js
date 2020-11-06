@@ -1,6 +1,6 @@
 if (document.URL.match( /orders/ ) ) {
   const pay = () => {
-    Payjp.setPublicKey("pk_test_8042d7184e1688f06566d6cf");// PAY.JPテスト公開鍵
+    Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY);
     const form = document.getElementById("charge-form");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
