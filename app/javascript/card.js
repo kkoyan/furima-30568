@@ -17,7 +17,6 @@ if (document.URL.match( /orders/ ) ) {
 
       Payjp.createToken(card, (status, response) => {
         if (status == 200) {
-          console.log(response)
           const token = response.id;
           const renderDom = document.getElementById("charge-form");
           const tokenObj = `<input value=${token} name='token' type="hidden">`;

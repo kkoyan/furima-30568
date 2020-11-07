@@ -71,10 +71,13 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.phone_number = '090123456789'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include()
-
       end
-      it '購入情報(user_id, item_id)が紐付いていない場合は購入出来ない' do
+      it '購入情報(user_id)が紐付いていない場合は購入出来ない' do
         @order_address.user_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include()
+      end
+      it '購入情報(item_id)が紐付いていない場合は購入出来ない' do
         @order_address.item_id = nil
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include()
