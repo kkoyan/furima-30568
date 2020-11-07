@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :item do
     image { 'test_image.png' }
-    name { Faker::String.random }
-    explanation { Faker::String.random }
+    name { 'sample' }
+    explanation { 'text' }
     category_id { rand(2..11) }
     condition_id { rand(2..7) }
     shipping_charge_id { rand(2..3) }
