@@ -13,10 +13,10 @@ class Item < ApplicationRecord
     validates :name
     validates :explanation
     validates :image
-    validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }, format: { with: /\A[0-9]+\z/ }
+    validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }, format: { with: /\A[0-9]+\z/, message: 'は半角数字で入力してください' }
   end
 
-  with_options numericality: { other_than: 1 } do
+  with_options numericality: { other_than: 1, message: 'を選択してください' } do
     validates :category_id
     validates :condition_id
     validates :shipping_charge_id
